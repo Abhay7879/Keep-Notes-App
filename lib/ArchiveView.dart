@@ -4,18 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:keep_notes/CreateNoteView.dart';
 
 import 'package:keep_notes/NoteView.dart';
-import 'package:keep_notes/SearchPage.dart';
 import 'package:keep_notes/SideMenuBar.dart';
 import 'package:keep_notes/colors.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class ArchiveView extends StatefulWidget {
+  const ArchiveView({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<ArchiveView> createState() => _ArchiveViewState();
 }
 
-class _HomeState extends State<Home> {
+class _ArchiveViewState extends State<ArchiveView> {
   GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
   String note =
       "This is a note This is a note This is a note This is a note This is a note This is a note This is a note This is a note This is a note This is a note This is a note This is a note This is a note This is a note This is a note This is a note This is a note This is a note";
@@ -76,28 +75,20 @@ class _HomeState extends State<Home> {
                           SizedBox(
                             width: 16,
                           ),
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SearchView()));
-                            },
-                            child: Container(
-                              height: 55,
-                              width: 200,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Search Your Notes",
-                                    style: TextStyle(
-                                        color: white.withOpacity(0.5),
-                                        fontSize: 16),
-                                  ),
-                                ],
-                              ),
+                          Container(
+                            height: 55,
+                            width: 200,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Search Your Notes",
+                                  style: TextStyle(
+                                      color: white.withOpacity(0.5),
+                                      fontSize: 16),
+                                ),
+                              ],
                             ),
                           ),
                         ],
